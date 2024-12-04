@@ -1,0 +1,16 @@
+services:
+  attacker:
+    build: 
+      context: ./attacker
+    container_name: attacker
+    privileged: true
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+
+  victim:
+    build:
+      context: ./victim
+    container_name: victim
+    ports:
+      - 8080:80
