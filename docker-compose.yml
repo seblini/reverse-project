@@ -2,11 +2,7 @@ services:
   attacker:
     build: 
       context: ./attacker
-    container_name: attacker
-    privileged: true
-    cap_add:
-      - NET_RAW
-      - NET_ADMIN
+    container_name: attacker 
 
   victim:
     build:
