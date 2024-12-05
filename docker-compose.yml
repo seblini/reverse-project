@@ -1,12 +1,14 @@
 services:
-  attacker:
-    build: 
-      context: ./attacker
-    container_name: attacker 
-
   victim:
     build:
       context: ./victim
     container_name: victim
     ports:
       - 8080:80
+
+  attacker:
+    build: 
+      context: ./attacker
+    container_name: attacker 
+    network_mode: "host"
+  
