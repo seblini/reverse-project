@@ -17,7 +17,7 @@ sleep 5
 
 echo "Running attack..."
 
-slowloris 127.0.0.1 -p 8080 -s 1000 -v &
+slowloris 127.0.0.1 -p 8080 -s 10000 -v &
 
 echo "sleeping 5"
 
