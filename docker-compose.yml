@@ -5,12 +5,12 @@ services:
   #   container_name: victim
   #   ports:
   #     - 8080:80
-  weak-victim:
+  apache-victim:
     build:
-      context: ./weak-victim
-    container_name: weak-victim
+      context: ./apache-victim
+    container_name: apache-victim
     ports:
-      - 8080:3000
+      - 8080:80
 
   attacker:
     build: 
